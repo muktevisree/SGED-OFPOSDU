@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+title: "SGED-OFPOSDU: Synthetic GHG Emissions Dataset for OFP–OSDU Integration in Energy Sector Reporting"
+version: "1.0"
+doi: 10.5281/zenodo.16787636
+date-released: 2025-08-14
+authors:
+  - family-names: Muktevi
+    given-names: Sreekanth
+type: dataset
+license: CC-BY-4.0
+abstract: >
+  This dataset contains 500 synthetic records with 32 attributes designed for interoperability
+  between the Open Footprint (OFP) emissions model and the Open Subsurface Data Universe (OSDU) schemas.
+  It enables ESG reporting validation, AI/ML model development, and operational–sustainability
+  data integration in the energy sector. Released under CC BY 4.0.
+repository-code: "https://github.com/<your-username>/SGED-OFPOSDU"
+url: "https://doi.org/10.5281/zenodo.16787636"
