@@ -1,0 +1,65 @@
+# Reviewer FAQ – SGED-OFPOSDU Dataset
+
+This FAQ addresses common reviewer and community questions about the SGED-OFPOSDU dataset and its contribution.
+
+---
+
+## 1. Which OSDU schemas (WKE/WKS) does this align with?
+
+This dataset maps attributes to the following OSDU Well-Known Schemas (WKS) and entities (based on publicly available documentation):
+
+- **WKS:master-data--Facility** → Facility_ID, Facility_Name, Facility_Type, Latitude, Longitude, Facility_Status  
+- **WKS:master-data--Asset** → Asset, Sector, Company  
+- **WKE:Measurement** → Emission_Value_tCO2e, Energy_Consumed_kWh, Flaring_Volume_Mscf, Methane_tons  
+- **WKE:ProductionData** → Production_Volume, Production_Unit  
+- *(Proposed)* **EnvironmentalData extension** → Scope_1_tCO2e, Scope_2_tCO2e, Scope_3_tCO2e  
+
+The complete mapping is documented in [`OFP_OSDU_Mapping_v1.0.csv`](../OFP_OSDU_Mapping_v1.0.csv).
+
+---
+
+## 2. Why create a synthetic dataset when LLMs can generate data easily?
+
+While LLMs can generate random emissions values, they **do not ensure schema compliance or interoperability** across two standards.  
+This dataset is unique because it:
+
+- Is explicitly **dual-mapped** to both OFP and OSDU schemas.  
+- Follows **GHG Protocol guidance** for Scope 1, 2, and 3 emissions.  
+- Embeds **FAIR principles** (Findable, Accessible, Interoperable, Reusable).  
+- Provides **consistent units, identifiers, and joins** across Facility and Asset entities.  
+
+In short: the novelty lies in **standard alignment and integration readiness**, not just synthetic data generation.
+
+---
+
+## 3. What is the broader impact or use case?
+
+The dataset supports multiple practical scenarios:
+
+- **ESG Reporting Pipeline Validation**: Test data for validating ingestion and transformation logic.  
+- **AI/ML Training**: A safe dataset for training models on emissions forecasting or anomaly detection.  
+- **OSDU ↔ OFP Integration**: Provides a reference for mapping operational production data with sustainability metrics.  
+- **Open Science Resource**: Freely available under CC-BY 4.0 for academic, industrial, and community testing.  
+
+---
+
+## 4. How does this relate to existing OSDU/OFP efforts?
+
+- OSDU currently lacks standardized **GHG emissions datasets**.  
+- OFP defines emissions reporting models but does not provide dual-mapped operational data examples.  
+- This dataset bridges that gap by creating the **first public OFP–OSDU dual schema dataset**.  
+
+---
+
+## 5. How can others contribute?
+
+Users are encouraged to:  
+- Propose schema extensions (e.g., EnvironmentalData WKE).  
+- Share validation scripts, visualizations, or notebooks.  
+- Extend the dataset with regional or activity-specific attributes.  
+
+Pull requests are welcome on GitHub.
+
+---
+
+*For further details, please see the [README](../README.md) and dataset DOI.*  
