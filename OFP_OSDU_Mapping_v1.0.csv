@@ -1,0 +1,34 @@
+Dataset_Field,Suggested_Description,Suggested_OFP_Attribute,Suggested_OSDU_Entity,Suggested_UOM,Notes
+Asset,Asset / equipment/system name,ofp:Asset.name,WKS:master-data--Asset,,If applicable
+Company,Owning/operator company,ofp:Organization.name,WKS:master-data--LegalEntity/Organization,,Check exact OSDU entity name
+Country,Country,ofp:Facility.location.country,WKS:reference-data (Country),,Use ISO codes if possible
+Region,"Region (e.g., Middle East)",ofp:Facility.location.region,WKS:reference-data (Region),,Organization-defined region ok
+Sector,Industry sector,ofp:Organization.industrySector,WKS:reference-data (Industry taxonomy),,Map to reference data
+Facility_ID,Unique facility identifier,ofp:Facility.identifier,WKS:master-data--Facility (confirm version),,Primary key for Facility
+Facility_Name,Facility name,ofp:Facility.name,WKS:master-data--Facility,,
+Facility_Type,"Type (Refinery, Wellsite, Platform, Cracker, etc.)",ofp:Facility.type,WKS:master-data--Facility,,
+Reporting_Year,Reporting year,ofp:Reporting.periodYear,Common Date/Time fields,year,
+Month,Reporting month (1-12),ofp:Reporting.periodMonth,Common Date/Time fields,month,
+Emission_Type,"GHG gas (CO2, CH4, N2O, etc.)",ofp:Emission.ghgType,WKE:Measurement (attribute for ghgType),,Use IPCC naming
+Emission_Value_tCO2e,Emissions (tCO2e),ofp:Emission.value,WKE:Measurement.value,tCO2e,Core numeric
+Emission_Method,,,,,
+Emission_Factor_Source,,,,,
+Regulator,,,,,
+Scope_1_tCO2e,Scope 1 emissions (tCO2e),ofp:Emission.scope1,WKE:Environmental (proposed) or Measurement,tCO2e,If separate fields retained
+Scope_2_tCO2e,Scope 2 emissions (tCO2e),ofp:Emission.scope2,WKE:Environmental (proposed) or Measurement,tCO2e,
+Scope_3_tCO2e,Scope 3 emissions (tCO2e),ofp:Emission.scope3,WKE:Environmental (proposed) or Measurement,tCO2e,
+Energy_Consumed_kWh,Energy consumed,ofp:Activity.energyUsed,WKE:Measurement.value,kWh,
+Flaring_Volume_Mscf,Flaring volume,ofp:Activity.flaringVolume,WKE:Measurement.value,Mscf,
+Methane_tons,Methane emitted,ofp:Emission.methaneMass,WKE:Measurement.value,ton,If CH4 mass kept separately
+Production_Volume,Production volume,ofp:Activity.productionVolume,WKE:ProductionData.volume,,
+Production_Unit,"Production unit (bbl, mcf, etc.)",ofp:Activity.productionUnit,WKE:ProductionData.unit,,
+Industry_Code,Industry classification code,ofp:Organization.industryCode,WKS:reference-data (NAICS/SIC),,
+Data_Quality,Data quality rating,ofp:DataQuality.rating,Common/Reference (Quality),,High/Medium/Low etc.
+Data_Type,Data type (Measured/Estimated/Calculated),ofp:Emission.method,WKE:Measurement.method,,Normalize values
+Dataset_Version,Dataset version,ofp:Dataset.version,Common metadata,,
+Source,Data source,ofp:Dataset.source,Common metadata,,
+Latitude,Latitude (decimal degrees),ofp:Facility.location.latitude,WKS:master-data--Facility → GeoLocation,deg,Confirm OSDU GeoLocation field path
+Longitude,Longitude (decimal degrees),ofp:Facility.location.longitude,WKS:master-data--Facility → GeoLocation,deg,Confirm OSDU GeoLocation field path
+Facility_Status,Operating status,ofp:Facility.status,WKS:master-data--Facility,,
+Notes,Free-text notes,ofp:Dataset.notes,Common metadata,,
+Total_Emissions,Total emissions (computed),ofp:Emission.total,WKE:Measurement.value,tCO2e,Sum of scopes if present
