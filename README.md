@@ -38,9 +38,13 @@ You are free to share and adapt with proper attribution. See the LICENSE file fo
 
 ---
 
-## Citation
+## 📘 Notebook Demo
 
-If you use this dataset, please cite it as:
+A quick-start Jupyter notebook is available to explore and visualize the dataset.
 
-Muktevi, S. (2025). **SGED-OFPOSDU: Synthetic GHG Emissions Dataset for OFP–OSDU Integration in Energy Sector Reporting (v1.0).** Zenodo.  
-[https://doi.org/10.5281/zenodo.16787636](https://doi.org/10.5281/zenodo.16787636)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/muktevisree/SGED-OFPOSDU/blob/main/notebooks/example.ipynb)
+
+### Run Locally
+```bash
+pip install -r requirements.txt
+jupyter notebook notebooks/example.ipynb
